@@ -4,6 +4,11 @@
 *{
 	margin: 0;padding: 0;
 }
+/*
+---------------------------------------------------
+	MENU BACKGROUND DARK CLASSES
+---------------------------------------------------
+*/
 
 .offCanvasBackground, .SubOffCanvasBackground{
 	width: 100%;
@@ -19,6 +24,13 @@
 .getDarker{
 	opacity: 0.7;
 }
+
+/*
+---------------------------------------------------
+	MENU & SUBMENU CLASSES
+---------------------------------------------------
+*/
+
 header{
 	display: block;
 	background: @blue;
@@ -55,5 +67,42 @@ header{
 .menuLevel1{left:-85%;width:85%;}
 .menuLevel2{left:-70%;width:70%;}
 .menu-open{overflow-y: scroll;left: 0;box-shadow: 5px 0 50px #000;}
+
+/*
+---------------------------------------------------
+	SEARCH BAR MENU
+---------------------------------------------------
+*/
+
+form{
+	width: 96%;
+	margin-left: 2%;
+	height: 50px;
+	float: left;
+	margin-top: 10px;
+	input{
+		width: 85.5%;
+		float: left;
+		height: 100%;
+		border-radius: 3px;
+		border: 1px solid #ccc;
+		text-indent: 5%;
+		font-size: 1.1em;
+	}
+	button{
+		width: 13%;
+		margin-left: 1.5%;
+		height: 100%;
+		padding: 15px 0;
+		border:none;
+		border-radius: 3px;
+		background: @green;
+		color: #fff;
+		font-size: 1.1em;
+		float: left;
+	}
+}
+
+
 
 
