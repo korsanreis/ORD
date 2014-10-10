@@ -9,7 +9,10 @@
 	<div class="offCanvasBackground"></div>
 	<div class="SubOffCanvasBackground"></div>
 	<?php require 'header.html'; ?>
-
+	<form>
+		<input type="text" class="searchBar">		
+		<button>Go</button>
+	</form>
 </body>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="demo.js"></script>
