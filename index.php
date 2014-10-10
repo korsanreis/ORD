@@ -13,6 +13,10 @@
 		<input type="text" class="searchBar" placeholder="Search by Part Number">		
 		<button>Go</button>
 	</form>
+	<div class="ymmeVinBtnSection">
+		<button>VEHICLE</button>
+		<button>VIN NUMBER</button>
+	</div>
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in est tincidunt, volutpat tortor in, volutpat sem. Mauris aliquam lobortis arcu ac viverra. Curabitur feugiat, ante vel volutpat vehicula, turpis ante fermentum justo, et molestie nulla est in tortor. Curabitur id fermentum ipsum. Donec congue sem at lectus porta, vel ornare velit posuere. Ut porta dui at porta finibus. Mauris aliquet lacus dolor, vitae elementum mauris gravida id. Vestibulum viverra fermentum augue, vehicula egestas nibh pellentesque scelerisque. Morbi vehicula efficitur neque at lacinia.
 		<br><br>
