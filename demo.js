@@ -29,3 +29,15 @@ $('.subNavGoBackBtn').click(function(){
 	$('.menuLevel1').removeClass('getDarker');
 	$('.SubOffCanvasBackground').removeClass('getDarker');
 });
+
+//************ GO BACK ************//
+
+
+$(".USTabs .ymmeVinBtnSection button").click(function(event) {
+    event.preventDefault();
+    $(this).addClass("current-tab-selected", {duration:500});
+    $(this).siblings().removeClass("current-tab-selected", {duration:500});
+    var tab = $(this).attr("href");
+    $(".tab-content").not(tab).css("display", "none");
+    $(tab).fadeIn();
+});

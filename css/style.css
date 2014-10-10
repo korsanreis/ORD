@@ -1,3 +1,7 @@
+.transition {
+  transition: left 0.4s ease;
+  -webkit-transition: left 0.4s ease;
+}
 * {
   margin: 0;
   padding: 0;
@@ -139,3 +143,84 @@ form button {
 	YMME + VIN SECTION
 ---------------------------------------------------
 */
+.USTabs .ymmeVinBtnSection {
+  width: 96%;
+  height: 50px;
+  float: left;
+  margin: 2% 0 0 2%;
+}
+.USTabs .ymmeVinBtnSection button {
+  width: 49%;
+  height: 100%;
+  float: left;
+  border: none;
+  border-radius: 3px;
+  font-size: 1.2em;
+  background: #878786;
+  color: #fff;
+  transition: left 0.4s ease;
+  -webkit-transition: left 0.4s ease;
+}
+.USTabs .ymmeVinBtnSection button:last-child {
+  margin-left: 2%;
+}
+.USTabs .ymmeVinBtnSection .current-tab-selected {
+  background: #2166ab;
+}
+.USTabs .tabsSection {
+  float: left;
+  width: 92%;
+  margin: 2% 0 0 2%;
+  background: #2166ab;
+  padding: 2%;
+  border-radius: 3px;
+}
+.USTabs .tabsSection #YMME-tab {
+  width: 100%;
+  display: block;
+}
+.USTabs .tabsSection #YMME-tab select {
+  width: 100%;
+  float: left;
+  margin-bottom: 2%;
+  display: block;
+  height: 35px;
+  border-radius: 3px;
+  border: 1px solid #878786;
+}
+.USTabs .tabsSection #YMME-tab button {
+  width: 100%;
+  padding: 12.5px 0;
+  background: #878786;
+  border: 2px solid #b6cc01;
+  border-radius: 3px;
+  color: #fff;
+}
+.USTabs .tabsSection #VIN-tab .VIN-tab-wrapper {
+  width: 100%;
+  height: 50px;
+  float: left;
+}
+.USTabs .tabsSection #VIN-tab .VIN-tab-wrapper input {
+  width: 85.5%;
+  height: 100%;
+  float: left;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  text-indent: 5%;
+  font-size: 1.1em;
+}
+.USTabs .tabsSection #VIN-tab .VIN-tab-wrapper button {
+  width: 13%;
+  height: 100%;
+  margin-left: 1.5%;
+  border: none;
+  border-radius: 3px;
+  background: #b6cc01;
+  color: #fff;
+  font-size: 1.1em;
+  float: left;
+}
+.USTabs .tabsSection .tab-content {
+  display: none;
+}
