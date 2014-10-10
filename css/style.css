@@ -2,27 +2,118 @@
   margin: 0;
   padding: 0;
 }
+.offCanvasBackground,
+.SubOffCanvasBackground {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+.getDarker {
+  opacity: 0.7;
+}
 header {
   display: block;
   background: #2166ab;
   float: left;
   width: 100%;
+  padding: 15px 0;
 }
 header .osc_logo {
+  color: #fff;
   text-align: center;
   width: 30%;
   float: left;
   display: block;
 }
 header span {
+  color: #fff;
   text-align: center;
   float: left;
   width: 40%;
   display: block;
 }
-header .toggle_Nav_Menu {
+header .toggle_btn_menu {
+  color: #fff;
   text-align: center;
   width: 30%;
   float: left;
   display: block;
+}
+.menuLevel1 {
+  position: fixed;
+  top: 0;
+  left: -85%;
+  bottom: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 85%;
+  background: #fff;
+  transition: left 0.4s ease;
+  -webkit-transition: left 0.4s ease;
+}
+.menuLevel1 li {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(33, 102, 171, 0.1);
+}
+.menuLevel1 li:active {
+  background: #2166ab;
+}
+.menuLevel1 li:active a {
+  color: #fff;
+}
+.menuLevel1 li a {
+  font-weight: 800;
+  color: #2166ab;
+  text-decoration: none;
+  padding-left: 5%;
+}
+.menuLevel1 li h2 {
+  text-align: center;
+  background: #b6cc01;
+  color: #2166ab;
+  padding: 15px 0;
+}
+.menuLevel2 {
+  position: fixed;
+  top: 0;
+  left: -70%;
+  bottom: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 70%;
+  background: #fff;
+  transition: left 0.4s ease;
+  -webkit-transition: left 0.4s ease;
+}
+.menuLevel2 li {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(33, 102, 171, 0.1);
+}
+.menuLevel2 li:active {
+  background: #2166ab;
+}
+.menuLevel2 li:active a {
+  color: #fff;
+}
+.menuLevel2 li a {
+  font-weight: 800;
+  color: #2166ab;
+  text-decoration: none;
+  padding-left: 5%;
+}
+.menuLevel2 li h2 {
+  text-align: center;
+  background: #b6cc01;
+  color: #2166ab;
+  padding: 15px 0;
+}
+.menu-open {
+  overflow-y: scroll;
+  left: 0;
+  box-shadow: 5px 0 50px #000;
 }
