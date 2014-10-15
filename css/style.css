@@ -224,3 +224,29 @@ form button {
 .USTabs .tabsSection .tab-content {
   display: none;
 }
+/*
+---------------------------------------------------
+	CATEGORIES SLIDER - SWIPER
+---------------------------------------------------
+*/
+.categories-container {
+  width: 100%;
+  float: left;
+  background: red;
+  margin-top: 12px;
+  position: relative;
+}
+.categories-container .arrows {
+  background: #b6cc01;
+  color: #fff;
+  padding: 30px 4%;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+}
+.categories-container .arrow-left {
+  left: 0;
+}
+.categories-container .arrow-right {
+  right: 0;
+}
