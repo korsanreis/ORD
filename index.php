@@ -13,17 +13,17 @@
 	<div id="wrapper">
 		<?php require 'search.html'; ?>
 
-		<div class="categories-container">
-		    <a class="arrows arrow-left" href="#"><</a> 
-		    <div class="swiper-container">
-			    <div class="swipe-wrapper">
-					<div class="swiper-slide"><img src="img/brakes.png"><img src="img/wiper.png"></div>
-					<div class="swiper-slide"><img src="img/wiper.png"><img src="img/air_fuel.png"></div>
-					<div class="swiper-slide"><img src="img/air_fuel.png"><img src="img/electrical_lighting.png"></div>
-					<div class="swiper-slide"><img src="img/electrical_lighting.png"><img src="img/brakes.png"></div>
+		<div class="touchslider">
+		    <span class="arrows touchslider-prev" href="#"><</span> 
+		    <div class="touchslider-container">
+			    <div class="touchslider-wrapper">
+					<div class="touchslider-item"><img src="img/brakes.png"><img src="img/wiper.png"></div>
+					<div class="touchslider-item"><img src="img/wiper.png"><img src="img/air_fuel.png"></div>
+					<div class="touchslider-item"><img src="img/air_fuel.png"><img src="img/electrical_lighting.png"></div>
+					<div class="touchslider-item"><img src="img/electrical_lighting.png"><img src="img/brakes.png"></div>
 			    </div>
 		    </div>
-		    <a class="arrows arrow-right" href="#">></a>
+		    <span class="arrows touchslider-next" href="#">></span>
 		</div>
 		<footer>
 			<h2>RECEIVE OUR GREAT DEALS !</h2>
@@ -64,7 +64,21 @@
 	<script src="js/slider.js"></script>
 	<script>
 		jQuery(function($) {
-		    $(".touchslider").touchSlider({/*options*/});
+		    $(".touchslider").touchSlider({
+		    	container: this,
+				duration: 350, // the speed of the sliding animation in milliseconds
+				delay: 3000, // initial auto-scrolling delay for each loop
+				margin: 5, // borders size. The margin is set in pixels.
+				mouseTouch: true,
+				namespace: "touchslider",
+				next: ".touchslider-next", // jQuery object for the elements to which a "scroll forwards" action should be bound.
+				pagination: ".touchslider-nav-item",
+				currentClass: "touchslider-nav-item-current", // class name for current pagination item.
+				prev: ".touchslider-prev", // jQuery object for the elements to which a "scroll backwards" action should be bound.
+				scroller: viewport.children(),
+				autoplay: false, // whether to move from image to image automatically
+				viewport: ".touchslider-viewport"
+			});
 		});
 	</script>
 </html>
