@@ -35,6 +35,7 @@ header {
   background: #2166ab;
   float: left;
   width: 100%;
+  z-index: 2;
   padding: 15px 0;
 }
 header .osc_logo,
@@ -267,4 +268,52 @@ form button {
 .categories-container .swiper-container .swipe-wrapper .swiper-slide img {
   width: 40%;
   margin: 5% 5%;
+}
+/*
+---------------------------------------------------
+	FOOTER + NESLETTER + SOCIQL + WEBSITE PLAN
+---------------------------------------------------
+*/
+.newsletter-form {
+  float: left;
+  padding: 12px 0;
+  border-top: 1px solid #878786;
+  border-bottom: 1px solid grey;
+}
+.newsletter-form button {
+  background: #2166ab;
+}
+.social-network {
+  width: 100%;
+  float: left;
+  margin-top: 12px;
+}
+.social-network span {
+  float: left;
+  width: 25%;
+  text-align: center;
+  text-decoration: none;
+}
+.website-plan {
+  margin: 12px 0;
+  width: 98%;
+  margin: 0 2%;
+  list-style: none;
+  float: left;
+}
+.website-plan li {
+  float: left;
+  width: 50%;
+}
+.website-plan li a {
+  background: #2166ab;
+  width: 96%;
+  margin: 2% 0;
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 3px;
+  opacity: 0.8;
 }
