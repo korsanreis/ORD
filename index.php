@@ -29,11 +29,11 @@
 	
     <!-- END BODY -->
 </body>
-	<script src="js/jquery-1.10.1.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/idangerous.swiper.min.js"></script>
 	<script>
 		window.onload = function() {
-			var mySwiper = new Swiper('.swiper-container',{
+			var mySwiper = new Swiper('#wrapper .categories-container .swiper-container',{
 				mode:'horizontal',
 				loop:true,
 				grabCursor: true
@@ -46,7 +46,7 @@
 				e.preventDefault()
 				mySwiper.swipeNext()
 			})
-		});
+		}
 	</script>
 	<script src="demo.js"></script>
 </html>
