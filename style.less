@@ -8,6 +8,13 @@
 *{
 	margin: 0;padding: 0;
 }
+
+#wrapper{
+	z-index: -1;
+	float: left;
+	width: 100%;
+	display: block;
+}
 /*
 ---------------------------------------------------
 	MENU BACKGROUND DARK CLASSES
@@ -66,7 +73,7 @@ header{
 }
 .menuLevel1{left:-85%;width:85%;}
 .menuLevel2{left:-70%;width:70%;}
-.menu-open{overflow-y: scroll;left: 0;box-shadow: 5px 0 50px #000;}
+.menu-open{overflow-y: scroll;left: 0;box-shadow: 5px 0 50px #000;z-index:2;}
 
 /*
 ---------------------------------------------------
@@ -202,19 +209,27 @@ form{
 
 .categories-container{
 	width: 100%;
+	height: 200px;
 	float: left;
-	background: red;
 	margin-top: 12px;
 	position: relative;
 	.arrows{
+		float: left;
+		text-align: center;
 		background: @green;
+		line-height: 200px;
 		color: #fff;
-		padding: 30px 4%;
+		width: 10%;
+		height: 100%;
 		text-decoration: none;
-		position: absolute;
-		top: 0;
 	}
-	.arrow-left{left: 0;}
-	.arrow-right{right: 0;}
+	.swiper-container{float: left;width: 80%;height: 200px;
+		.swipe-wrapper{
+			.swiper-slide{
+		  		width: 100%;
+		  		height: 200px;
+		  	}
+		}
+	}
 }
 
