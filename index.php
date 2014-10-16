@@ -60,23 +60,11 @@
     <!-- END BODY -->
 </body>
 	<script src="js/jquery-1.10.1.min.js"></script>
-	<script src="js/idangerous.swiper.min.js"></script>
+	<script src="js/demo.js"></script>
+	<script src="js/slider.js"></script>
 	<script>
-		window.onload = function() {
-			var mySwiper = new Swiper('.swiper-container',{
-				mode:'horizontal',
-				loop:true,
-				grabCursor: true
-			})
-			$('.arrow-left').on('click', function(e){
-				e.preventDefault()
-				mySwiper.swipePrev()
-			})
-			$('.arrow-right').on('click', function(e){
-				e.preventDefault()
-				mySwiper.swipeNext()
-			})
+		jQuery(function($) {
+		    $(".touchslider").touchSlider({/*options*/});
 		});
 	</script>
-	<script src="demo.js"></script>
 </html>
