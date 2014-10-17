@@ -49,10 +49,11 @@ http://touchslider.com
 			pagination = $(options.pagination, container);
 
 		if (scroller.css("position") !== "absolute") {
-			var viewportHeight = viewport.height();
+			var viewportHeight = 200;//viewport.height()
 			viewport.css({
 				height: viewportHeight,
-				position: "relative"
+				position: "relative",
+				width: "80%"
 			});
 			scroller.css({
 				position: "absolute",
@@ -347,7 +348,7 @@ http://touchslider.com
 						// maximum area
 						var i, right,
 							maximumInViewport = inViewportLength - 1,
-							viewportWidth = viewport.innerWidth();
+							viewportWidth = 80 + '%';//viewport.innerWidth()
 						for (i = 0 ; i < inViewportLength - 1; i++ ) { // no need check last
 							right = endCoords[i] + slides.eq(inViewport[i]).outerWidth() + scrollerLeft;
 							if (right > 0 && right > viewportWidth - (endCoords[i+1] + scrollerLeft)) {
