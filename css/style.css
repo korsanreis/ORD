@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  z-index: 0;
 }
 /*
 ---------------------------------------------------
@@ -21,6 +22,7 @@
   pointer-events: none;
   -webkit-transition: 1s ease all;
   transition: 1s ease all;
+  z-index: 2;
 }
 .getDarker {
   opacity: 0.7;
@@ -96,10 +98,12 @@ header .toggle_btn_menu {
 .menuLevel1 {
   left: -85%;
   width: 85%;
+  z-index: 3;
 }
 .menuLevel2 {
   left: -70%;
   width: 70%;
+  z-index: 4;
 }
 .menu-open {
   overflow-y: scroll;
@@ -275,43 +279,90 @@ form button {
   width: 40%;
   margin: 5% 5%;
 }
+.touchslider .touchslider-viewport .touchslider-item span a img {
+  width: 100%;
+}
+/*
+---------------------------------------------------
+	PROMOTION
+---------------------------------------------------
+*/
+#promotion {
+  width: 96%;
+  float: left;
+  margin: 12px 0 0 2%;
+}
+#promotion a {
+  width: 100%;
+}
+#promotion a img {
+  width: 100%;
+}
 /*
 ---------------------------------------------------
 	FOOTER + NESLETTER + SOCIQL + WEBSITE PLAN
 ---------------------------------------------------
 */
-.newsletter-form {
+footer {
+  margin-top: 12px;
+  width: 100%;
+  float: left;
+}
+footer h2 {
+  color: #878786;
+  float: left;
+  text-align: center;
+  width: 100%;
+}
+footer .newsletter-form {
   float: left;
   padding: 12px 0;
   border-top: 1px solid #878786;
   border-bottom: 1px solid grey;
 }
-.newsletter-form button {
+footer .newsletter-form button {
   background: #2166ab;
 }
-.social-network {
-  width: 100%;
+footer .social-network {
+  width: 96%;
+  margin-left: 2%;
   float: left;
-  margin-top: 12px;
+  margin: 12px 0;
 }
-.social-network span {
+footer .social-network a {
+  font-size: 400%;
+  font-family: 'icomoon';
+  display: block;
   float: left;
-  width: 25%;
+  width: 23%;
+  margin: 0 1%;
   text-align: center;
   text-decoration: none;
 }
-.website-plan {
+footer .social-network .icon-googleplus {
+  color: #da4835;
+}
+footer .social-network .icon-twitter {
+  color: #359fdc;
+}
+footer .social-network .icon-feed {
+  color: #fd7900;
+}
+footer .social-network .icon-facebook {
+  color: #3b5a99;
+}
+footer .website-plan {
   margin: 12px 0;
   width: 98%;
   margin: 0 2%;
   list-style: none;
   float: left;
 }
-.website-plan li {
+footer .website-plan li {
   float: left;
   width: 50%;
 }
-.website-plan li a {
+footer .website-plan li a {
   background: #2166ab;
   width: 96%;
   margin: 2% 0;
@@ -322,4 +373,12 @@ form button {
   padding: 10px 0;
   border-radius: 3px;
   opacity: 0.8;
+}
+footer p {
+  width: 100%;
+  float: left;
+  margin: 12px 0;
+  text-align: center;
+  color: #878786;
+  font-size: 0.8em;
 }

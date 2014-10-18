@@ -1,12 +1,17 @@
 @blue : rgba(33,102,171,1);
 @green : rgba(182, 204, 1, 1);
 @grey: rgba(135, 135, 134, 1);
+
+@facebookBlue: rgba(59, 90, 153, 1);
+@googlePlusRed: rgba(218, 72, 53, 1);
+@twitterBlue: rgba(53, 159, 220, 1);
+@feedOrange: rgba(253, 121, 0, 1);
 .transition{
 	transition: left 0.4s ease;
 	-webkit-transition: left 0.4s ease;
 }
 *{
-	margin: 0;padding: 0;
+	margin: 0;padding: 0;z-index: 0;
 }
 
 // #wrapper{
@@ -30,6 +35,7 @@
 	pointer-events: none;
 	-webkit-transition:1s ease all;
 	transition:1s ease all;
+	z-index: 2;
 }
 .getDarker{opacity: 0.7;}
 
@@ -72,8 +78,8 @@ header{
 		h2{text-align: center;background: @green;color: @blue;padding: 15px 0;}
 	}
 }
-.menuLevel1{left:-85%;width:85%;}
-.menuLevel2{left:-70%;width:70%;}
+.menuLevel1{left:-85%;width:85%;z-index: 3}
+.menuLevel2{left:-70%;width:70%;z-index: 4}
 .menu-open{overflow-y: scroll;left: 0;box-shadow: 5px 0 50px #000;z-index:2;}
 
 /*
@@ -241,6 +247,9 @@ form{
 		  			float: left;
 		  			width: 40%;
 		  			margin: 5% 5%;
+		  			img{
+		  				width: 100%;
+		  			}
 		  		}	
 	  		}
 	  	}
@@ -249,48 +258,92 @@ form{
 
 /*
 ---------------------------------------------------
-	FOOTER + NESLETTER + SOCIQL + WEBSITE PLAN
+	PROMOTION
 ---------------------------------------------------
 */
-.newsletter-form{
-	button{background:@blue}
-	float: left;
-	padding: 12px 0;
-	border-top: 1px solid @grey;
-	border-bottom: 1px solid grey;
-}
-.social-network{
-	width: 100%;
-	float: left;
-	margin-top: 12px;
-	span{
-		float: left;
-		width: 25%;
-		text-align: center;text-decoration: none;
 
-	}
-}
-.website-plan{
-	margin: 12px 0;
-	width: 98%;
-	margin: 0 2%;
-	list-style: none;
+#promotion{
+	width: 96%;
 	float: left;
-	li{
-		float: left;
-		width: 50%;
-		a{
-			background: @blue;
-			width: 96%;
-			margin: 2% 0;
-			float: left;
-			text-align: center;
-			text-decoration: none;
-			color: #fff;
-			padding: 10px 0;
-			border-radius: 3px;
-			opacity: 0.8;
+	margin: 12px 0 0 2%;
+	a{
+		width: 100%;
+		img{
+			width: 100%;
 		}
 	}
 }
 
+/*
+---------------------------------------------------
+	FOOTER + NESLETTER + SOCIQL + WEBSITE PLAN
+---------------------------------------------------
+*/
+footer{
+	margin-top: 12px;
+	width: 100%;
+	float: left;
+	h2{    
+		color: @grey;
+		float: left;
+    	text-align: center;
+    	width: 100%;
+    }
+	.newsletter-form{
+		button{background:@blue}
+		float: left;
+		padding: 12px 0;
+		border-top: 1px solid @grey;
+		border-bottom: 1px solid grey;
+	}
+	.social-network{
+		width: 96%;
+		margin-left: 2%;
+		float: left;
+		margin: 12px 0;
+		a{
+			font-size: 400%;
+			font-family: 'icomoon';
+			display: block;
+			float: left;
+			width: 23%;
+			margin: 0 1%;
+			text-align: center;text-decoration: none;
+		}
+		.icon-googleplus{color:@googlePlusRed;}
+		.icon-twitter{color:@twitterBlue;}
+		.icon-feed{color:@feedOrange;}
+		.icon-facebook{color:@facebookBlue;}
+	}
+	.website-plan{
+		margin: 12px 0;
+		width: 98%;
+		margin: 0 2%;
+		list-style: none;
+		float: left;
+		li{
+			float: left;
+			width: 50%;
+			a{
+				background: @blue;
+				width: 96%;
+				margin: 2% 0;
+				float: left;
+				text-align: center;
+				text-decoration: none;
+				color: #fff;
+				padding: 10px 0;
+				border-radius: 3px;
+				opacity: 0.8;
+			}
+		}
+	}
+	p{
+		width: 100%;
+		float: left;
+		margin: 12px 0;
+		text-align: center;
+		color: @grey;
+		font-size: 0.8em;
+	}
+}

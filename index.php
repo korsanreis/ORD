@@ -3,7 +3,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="css/style.css">
-  	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/social-icon.css">
 	<title>OscaroParts.com</title>
 </head>
 <body>
@@ -13,6 +13,9 @@
 	<div id="wrapper">
 		<?php require 'templates/search.html'; ?>
 		<?php require 'templates/home-slider.html'; ?>
+		<div id="promotion">
+			<a href="#"><img src="img/Meyle2.jpg" alt=""></a>
+		</div>
 		<?php require 'templates/footer.html'; ?>
 	</div>
 	
