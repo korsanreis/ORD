@@ -1,3 +1,133 @@
+.product-list-breadcrumb {
+  float: left;
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 12px;
+  border: 1px solid #2166ab;
+  border-radius: 3px;
+}
+.product-list-breadcrumb p {
+  width: 100%;
+  float: left;
+  color: #2166ab;
+  padding: 2% 0 2% 2%;
+}
+.product-list-breadcrumb section {
+  background: #2166ab;
+  float: left;
+  width: 96%;
+  padding: 2%;
+}
+.product-list-breadcrumb section button {
+  float: left;
+  border-radius: 3px;
+  border: 2px solid #dadad9;
+  background: #f5f4f4;
+  color: #878786;
+  height: 35px;
+  width: 30%;
+  font-weight: bold;
+}
+.product-list-breadcrumb section select {
+  float: left;
+  border-radius: 3px;
+  border: 2px solid #dadad9;
+  background: #f5f4f4;
+  color: #878786;
+  display: block;
+  padding: 2% 0;
+  width: 68%;
+  height: 35px;
+  margin-left: 2%;
+  font-weight: bold;
+}
+.parts-list {
+  margin-top: 2%;
+  width: 96%;
+  padding: 0 2%;
+  float: left;
+}
+.parts-list section {
+  width: 100%;
+  min-height: 30px;
+  float: left;
+  border-bottom: 2px solid #dadad9;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+}
+.parts-list section .left-part-section {
+  width: 30%;
+  float: left;
+}
+.parts-list section .left-part-section img {
+  width: 100%;
+  border: 1px solid #dadad9;
+  float: left;
+}
+.parts-list section .left-part-section span {
+  border: 2px solid #dadad9;
+  background: #f5f4f4;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 0.8em;
+  margin-top: 5%;
+  padding: 2% 0;
+  width: 100%;
+  float: left;
+  color: #2166ab;
+}
+.parts-list section .right-part-section {
+  margin-left: 5%;
+  width: 55%;
+  float: left;
+}
+.parts-list section .right-part-section a {
+  color: #2166ab;
+  width: 100%;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+.parts-list section .right-part-section h4 {
+  color: #be1621;
+  width: 100%;
+  font-size: 2em;
+}
+.parts-list section .arrow {
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 17%;
+  color: #b6cc01;
+  float: left;
+  width: 10%;
+}
+.product-list-pagination {
+  background: #2166ab;
+  float: left;
+  width: 96%;
+  padding: 2%;
+}
+.product-list-pagination .page-counter {
+  background: #fff;
+  border: 2px solid #dadad9;
+  float: left;
+  border-radius: 3px;
+  color: #878786;
+  padding: 0 2%;
+  height: 30px;
+  line-height: 30px;
+}
+.product-list-pagination button {
+  background: #f5f4f4;
+  border: 2px solid #dadad9;
+  color: #878786;
+  border-radius: 3px;
+  margin-left: 2%;
+  padding: 0 2%;
+  height: 34px;
+  float: left;
+  line-height: 20px;
+}
 .transition {
   transition: left 0.4s ease;
   -webkit-transition: left 0.4s ease;
@@ -43,7 +173,7 @@ header {
 header .osc_logo,
 header span,
 header .toggle_btn_menu {
-  color: #fff;
+  color: #f5f4f4;
   text-align: center;
   float: left;
   display: block;
@@ -64,7 +194,7 @@ header .toggle_btn_menu {
   bottom: 0;
   overflow-y: hidden;
   overflow-x: hidden;
-  background: #fff;
+  background: #f5f4f4;
   transition: left 0.4s ease;
   -webkit-transition: left 0.4s ease;
 }
@@ -79,7 +209,7 @@ header .toggle_btn_menu {
 }
 .menuLevel1 li:active a,
 .menuLevel2 li:active a {
-  color: #fff;
+  color: #f5f4f4;
 }
 .menuLevel1 li a,
 .menuLevel2 li a {
@@ -140,9 +270,13 @@ form button {
   border: none;
   border-radius: 3px;
   background: #b6cc01;
-  color: #fff;
   font-size: 1.1em;
   float: left;
+  color: #f5f4f4;
+}
+form button a {
+  color: #f5f4f4;
+  text-decoration: none;
 }
 /*
 ---------------------------------------------------
@@ -163,7 +297,7 @@ form button {
   border-radius: 3px;
   font-size: 1.2em;
   background: #878786;
-  color: #fff;
+  color: #f5f4f4;
   transition: left 0.4s ease;
   -webkit-transition: left 0.4s ease;
 }
@@ -197,10 +331,11 @@ form button {
 .USTabs .tabsSection #YMME-tab button {
   width: 100%;
   padding: 12.5px 0;
-  background: #878786;
+  background: #dadad9;
   border: 2px solid #b6cc01;
   border-radius: 3px;
-  color: #fff;
+  color: #878786;
+  font-weight: bold;
 }
 .USTabs .tabsSection #VIN-tab .VIN-tab-wrapper {
   width: 100%;
@@ -223,7 +358,7 @@ form button {
   border: none;
   border-radius: 3px;
   background: #b6cc01;
-  color: #fff;
+  color: #f5f4f4;
   font-size: 1.1em;
   float: left;
 }
@@ -248,7 +383,7 @@ form button {
   background: #b6cc01;
   opacity: 0.6;
   line-height: 200px;
-  color: #fff;
+  color: #f5f4f4;
   width: 10%;
   height: 100%;
   text-decoration: none;
@@ -369,7 +504,7 @@ footer .website-plan li a {
   float: left;
   text-align: center;
   text-decoration: none;
-  color: #fff;
+  color: #f5f4f4;
   padding: 10px 0;
   border-radius: 3px;
   opacity: 0.8;
@@ -381,4 +516,6 @@ footer p {
   text-align: center;
   color: #878786;
   font-size: 0.8em;
+  border-top: 1px solid #878786;
+  padding-top: 12px;
 }
