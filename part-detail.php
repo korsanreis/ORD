@@ -1,10 +1,6 @@
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/social-icon.css">
-	<title>OscaroParts.com | Product Detail</title>
+	<?php require 'sources/header.html'; ?>
 </head>
 <body>
 	<div class="offCanvasBackground"></div>
@@ -18,10 +14,5 @@
 	
     <!-- END BODY -->
 </body>
-	<script src="js/jquery-1.10.1.min.js"></script>
-	<script src="js/demo.js"></script>
-	<script src="js/slider.js"></script>	
-	<script>
-		$(".touchslider").touchSlider({mouseTouch: true,container: this});
-	</script>
+	<?php require 'sources/footer.html'; ?>
 </html>

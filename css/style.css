@@ -1,3 +1,68 @@
+.transition {
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+.filter-menu-level-1,
+.filter-menu-level-2 {
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background: #fff;
+}
+.filter-menu-level-1 .navGoBackBtn a:before,
+.filter-menu-level-2 .navGoBackBtn a:before {
+  margin: 0 0 0 3%;
+  font-size: 2em;
+  float: left;
+}
+.filter-menu-level-1 li,
+.filter-menu-level-2 li {
+  list-style: none;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid rgba(33, 102, 171, 0.1);
+}
+.filter-menu-level-1 li:active,
+.filter-menu-level-2 li:active {
+  background: #2166ab;
+}
+.filter-menu-level-1 li:active a,
+.filter-menu-level-2 li:active a {
+  color: #f5f4f4;
+}
+.filter-menu-level-1 li a,
+.filter-menu-level-2 li a {
+  font-weight: 800;
+  color: #2166ab;
+  text-decoration: none;
+  padding-left: 5%;
+}
+.filter-menu-level-1 li h2,
+.filter-menu-level-2 li h2 {
+  text-align: center;
+  background: #b6cc01;
+  color: #2166ab;
+}
+.filter-menu-level-1 {
+  right: -85%;
+  width: 85%;
+  z-index: 3;
+}
+.filter-menu-level-2 {
+  right: -70%;
+  width: 70%;
+  z-index: 4;
+}
+.filter-open {
+  overflow-y: scroll;
+  right: 0;
+  box-shadow: 5px 0 50px #000;
+  z-index: 2;
+}
 .product-list-breadcrumb {
   float: left;
   width: 96%;
@@ -21,12 +86,16 @@
 .product-list-breadcrumb section button {
   float: left;
   border-radius: 3px;
+  font-size: 1em;
   border: 2px solid #dadad9;
   background: #f5f4f4;
   color: #878786;
   height: 35px;
   width: 30%;
   font-weight: bold;
+}
+.product-list-breadcrumb section button:before {
+  margin-right: 3%;
 }
 .product-list-breadcrumb section select {
   float: left;
@@ -76,6 +145,9 @@
   float: left;
   color: #2166ab;
 }
+.parts-list section .left-part-section span:before {
+  margin-right: 3%;
+}
 .parts-list section .right-part-section {
   margin-left: 5%;
   width: 55%;
@@ -97,6 +169,7 @@
   text-align: center;
   font-weight: bold;
   margin-top: 17%;
+  font-size: 2em;
   color: #b6cc01;
   float: left;
   width: 10%;
@@ -198,6 +271,15 @@
   color: #2166ab;
   text-decoration: none;
 }
+.parts-detail section .right-part-section button a:before {
+  margin-right: 5%;
+}
+.parts-detail section .right-part-section button:active {
+  background: #2166ab;
+}
+.parts-detail section .right-part-section button:active a {
+  color: #ffffff;
+}
 .parts-detail h5 {
   color: #2166ab;
   margin: 2% 0;
@@ -227,8 +309,8 @@
   text-decoration: none;
 }
 .transition {
-  transition: left 0.4s ease;
-  -webkit-transition: left 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
 }
 * {
   margin: 0;
@@ -276,8 +358,8 @@ header {
   background: #2166ab;
   float: left;
   width: 100%;
+  height: 50px;
   z-index: 2;
-  padding: 15px 0;
 }
 header .osc_logo,
 header span,
@@ -288,13 +370,28 @@ header .toggle_btn_menu {
   display: block;
 }
 header span {
-  width: 40%;
+  height: 50px;
+  float: left;
+  line-height: 50px;
+  width: 65%;
+}
+header span:before {
+  margin-right: 3%;
 }
 header .osc_logo {
-  width: 30%;
+  width: 20%;
+}
+header .osc_logo img {
+  width: 107px;
+  height: 40px;
+  margin-top: 5px;
 }
 header .toggle_btn_menu {
-  width: 30%;
+  width: 15%;
+  line-height: 50px;
+  font-size: 2.5em;
+  display: block;
+  text-decoration: none;
 }
 .menuLevel1,
 .menuLevel2 {
@@ -304,12 +401,20 @@ header .toggle_btn_menu {
   overflow-y: hidden;
   overflow-x: hidden;
   background: #f5f4f4;
-  transition: left 0.4s ease;
-  -webkit-transition: left 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+.menuLevel1 .navGoBackBtn a:before,
+.menuLevel2 .navGoBackBtn a:before {
+  margin: 0 0 0 3%;
+  font-size: 2em;
+  float: left;
 }
 .menuLevel1 li,
 .menuLevel2 li {
-  padding: 15px 0;
+  list-style: none;
+  height: 50px;
+  line-height: 50px;
   border-bottom: 1px solid rgba(33, 102, 171, 0.1);
 }
 .menuLevel1 li:active,
@@ -332,7 +437,6 @@ header .toggle_btn_menu {
   text-align: center;
   background: #b6cc01;
   color: #2166ab;
-  padding: 15px 0;
 }
 .menuLevel1 {
   left: -85%;
@@ -350,6 +454,11 @@ header .toggle_btn_menu {
   box-shadow: 5px 0 50px #000;
   z-index: 2;
 }
+/*
+---------------------------------------------------
+	SEARCH
+---------------------------------------------------
+*/
 /*
 ---------------------------------------------------
 	SEARCH BAR MENU
@@ -407,8 +516,11 @@ form button a {
   font-size: 1.2em;
   background: #878786;
   color: #f5f4f4;
-  transition: left 0.4s ease;
-  -webkit-transition: left 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+.USTabs .ymmeVinBtnSection button:before {
+  margin-right: 5%;
 }
 .USTabs .ymmeVinBtnSection button:last-child {
   margin-left: 2%;
@@ -493,11 +605,17 @@ form button a {
   line-height: 200px;
   color: #f5f4f4;
   width: 10%;
-  height: 100%;
+  height: 150px;
   text-decoration: none;
 }
 .touchslider .arrows:active {
   opacity: 1;
+}
+.touchslider .arrows span {
+  display: block;
+  color: #fff;
+  font-size: 2em;
+  line-height: 150px;
 }
 .touchslider .touchslider-viewport {
   float: left;
@@ -574,7 +692,6 @@ footer .social-network {
 }
 footer .social-network a {
   font-size: 400%;
-  font-family: 'icomoon';
   display: block;
   float: left;
   width: 23%;

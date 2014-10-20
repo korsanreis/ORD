@@ -8,7 +8,7 @@
 	<?php require 'templates/header.html'; ?>
 	<div id="wrapper">
 		<?php require 'templates/search.html'; ?>
-		<?php require 'templates/parts-list.html' ?>
+		<?php require 'templates/basket.html' ?>
 		<?php require 'templates/footer.html'; ?>
 	</div>
 	

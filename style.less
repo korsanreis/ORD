@@ -14,8 +14,8 @@
 @import url(parts-list.less);
 @import url(part-detail.less);
 .transition{
-	transition: left 0.4s ease;
-	-webkit-transition: left 0.4s ease;
+	transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
 }
 *{
 	margin: 0;padding: 0;z-index: 0;
@@ -62,169 +62,15 @@
 ---------------------------------------------------
 */
 
-header{
-	display: block;
-	background: @blue;
-	float: left;
-	width: 100%;
-	z-index: 2;
-	padding: 15px 0;
-	.osc_logo, span, .toggle_btn_menu{
-		color: @white;
-		text-align: center;
-		float: left;
-		display: block;
-	}
-	span{width: 40%;}
-	.osc_logo{width: 30%;}
-	.toggle_btn_menu{width: 30%;}
-}
-.menuLevel1, .menuLevel2{
-	position: fixed;
-	top:0; 
-	bottom: 0;
-	overflow-y: hidden;
-	overflow-x: hidden;
-	background:@white;
-	.transition;
-	li{
-		padding: 15px 0;
-		border-bottom: 1px solid rgba(33,102,171,0.1);
-		&:active{background: @blue;a{color: @white;}}
-		a{font-weight: 800;color: @blue;text-decoration: none;padding-left: 5%}
-		h2{text-align: center;background: @green;color: @blue;padding: 15px 0;}
-	}
-}
-.menuLevel1{left:-85%;width:85%;z-index: 3}
-.menuLevel2{left:-70%;width:70%;z-index: 4}
-.menu-open{overflow-y: scroll;left: 0;box-shadow: 5px 0 50px #000;z-index:2;}
+@import url(header.less);
 
 /*
 ---------------------------------------------------
-	SEARCH BAR MENU
+	SEARCH
 ---------------------------------------------------
 */
 
-form{
-	width: 96%;
-	margin-left: 2%;
-	height: 50px;
-	float: left;
-	margin-top: 10px;
-	input{
-		width: 85.5%;
-		float: left;
-		height: 100%;
-		border-radius: 3px;
-		border: 1px solid #ccc;
-		text-indent: 5%;
-		font-size: 1.1em;
-	}
-	button{
-		width: 13%;
-		margin-left: 1.5%;
-		height: 100%;
-		padding: 15px 0;
-		border:none;
-		border-radius: 3px;
-		background: @green;
-		font-size: 1.1em;
-		float: left;
-		color: @white;
-		a{color: @white;text-decoration: none;}
-	}
-}
-
-
-/*
----------------------------------------------------
-	YMME + VIN SECTION
----------------------------------------------------
-*/
-.USTabs{
-	.ymmeVinBtnSection{
-		width: 96%;
-		height: 50px;
-		float: left;
-		margin:2% 0 0 2%;
-		button{
-			width: 49%;
-			height: 100%;
-			float: left;
-			border:none;
-			border-radius: 3px;
-			font-size: 1.2em;
-			background: @grey;
-			color: @white;
-			.transition;
-			&:last-child{
-				margin-left: 2%;
-			}
-		}
-		.current-tab-selected{
-			background: @blue;
-		}
-	}
-	.tabsSection{
-		float: left;
-		width: 92%;
-		margin:2% 0 0 2%;
-		background: @blue;
-		padding: 2%;
-		border-radius: 3px;
-		#YMME-tab{
-			width: 100%;
-			select{
-				width: 100%;
-				float: left;
-				margin-bottom: 2%;
-				display: block;
-				height: 35px;
-				border-radius: 3px;
-				border:1px solid @grey;
-			}
-			button{
-				width: 100%;
-				padding: 12.5px 0;
-				background: @lightGrey;
-				border:2px solid @green;
-				border-radius: 3px;
-				color:@grey;
-				font-weight: bold;
-			}
-		}
-		#VIN-tab{
-			.VIN-tab-wrapper{	
-				width: 100%;
-				height: 50px;
-				float: left;
-				input{
-					width: 85.5%;
-					height: 100%;
-					float: left;
-					border-radius: 3px;
-					border: 1px solid #ccc;
-					text-indent: 5%;
-					font-size: 1.1em;
-				}
-				button{
-					width: 13%;
-					height: 100%;
-					margin-left: 1.5%;
-					border:none;
-					border-radius: 3px;
-					background: @green;
-					color: @white;
-					font-size: 1.1em;
-					float: left;
-				}
-			}
-		}
-		.tab-content{
-			display: none;
-		}
-	}
-}
+@import url(search.less);
 
 /*
 ---------------------------------------------------
@@ -246,10 +92,16 @@ form{
 		line-height: 200px;
 		color: @white;
 		width: 10%;
-		height: 100%;
+		height: 150px;
 		text-decoration: none;
 		&:active{
 			opacity: 1;
+		}
+		span{
+			display: block;
+			color: #fff;
+			font-size: 2em;
+			line-height: 150px;
 		}
 	}
 	.touchslider-viewport{float: left;width: 80%;height: 200px;display: block;position: relative;overflow: hidden;
@@ -297,73 +149,5 @@ form{
 	FOOTER + NESLETTER + SOCIQL + WEBSITE PLAN
 ---------------------------------------------------
 */
-footer{
-	margin-top: 12px;
-	width: 100%;
-	float: left;
-	h2{    
-		color: @darkGrey;
-		float: left;
-    	text-align: center;
-    	width: 100%;
-    }
-	.newsletter-form{
-		button{background:@blue}
-		float: left;
-		padding: 12px 0;
-		border-top: 1px solid @grey;
-		border-bottom: 1px solid grey;
-	}
-	.social-network{
-		width: 96%;
-		margin-left: 2%;
-		float: left;
-		margin: 12px 0;
-		a{
-			font-size: 400%;
-			font-family: 'icomoon';
-			display: block;
-			float: left;
-			width: 23%;
-			margin: 0 1%;
-			text-align: center;text-decoration: none;
-		}
-		.icon-googleplus{color:@googlePlusRed;}
-		.icon-twitter{color:@twitterBlue;}
-		.icon-feed{color:@feedOrange;}
-		.icon-facebook{color:@facebookBlue;}
-	}
-	.website-plan{
-		margin: 12px 0;
-		width: 98%;
-		margin: 0 2%;
-		list-style: none;
-		float: left;
-		li{
-			float: left;
-			width: 50%;
-			a{
-				background: @blue;
-				width: 96%;
-				margin: 2% 0;
-				float: left;
-				text-align: center;
-				text-decoration: none;
-				color: @white;
-				padding: 10px 0;
-				border-radius: 3px;
-				opacity: 0.8;
-			}
-		}
-	}
-	p{
-		width: 100%;
-		float: left;
-		margin: 12px 0;
-		text-align: center;
-		color: @darkGrey;
-		font-size: 0.8em;
-		border-top: 1px solid @grey;
-		padding-top: 12px;
-	}
-}
+
+@import url(footer.less);
