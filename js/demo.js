@@ -13,7 +13,7 @@ $('.getSubLevelMenu').click(function(){
   $('.SubOffCanvasBackground').addClass('getDarker');
 });
 
-//************ GO BACK ************//
+//************ GO BACK ITEM MENU ************//
 
 // Click on the go back button in first level nav
 
@@ -30,14 +30,30 @@ $('.subNavGoBackBtn').click(function(){
 	$('.SubOffCanvasBackground').removeClass('getDarker');
 });
 
-//************ GO BACK ************//
+//************ GO BACK ITEM MENU ************//
+
+//************ TAB CLOSE EXPAND ************//
 
 
 $(".USTabs .ymmeVinBtnSection button").click(function(event) {
     event.preventDefault();
+    $('.tabsSection').removeClass('closed-tab');
     $(this).addClass("current-tab-selected", {duration:500});
     $(this).siblings().removeClass("current-tab-selected", {duration:500});
     var tab = $(this).attr("href");
-    $(".tab-content").not(tab).css("display", "none");
+    $(".tab-content").not(tab).css('display','none');
     $(tab).fadeIn();
 });
+
+var baseUrl = 'http://localhost:8888/ORD/';
+var CurrentUrl = document.URL;
+
+if (CurrentUrl === baseUrl + 'index.php') {
+    $('#YMME-tab').css('display','block');
+}
+else{
+    $(".ymmeVinBtnSection button").removeClass("current-tab-selected");
+    $('.tabsSection').addClass('closed-tab');
+}
+
+

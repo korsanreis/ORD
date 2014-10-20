@@ -187,7 +187,6 @@
   float: left;
   width: 100%;
   background: #b6cc01;
-  color: #2166ab;
   font-weight: bold;
   border: none;
   font-size: 1em;
@@ -195,14 +194,37 @@
   padding: 5% 0;
   margin-top: 5%;
 }
+.parts-detail section .right-part-section button a {
+  color: #2166ab;
+  text-decoration: none;
+}
 .parts-detail h5 {
   color: #2166ab;
+  margin: 2% 0;
 }
 .parts-detail ul {
   color: #575756;
   float: left;
   width: 95%;
   margin-left: 5%;
+}
+.parts-detail ul li p {
+  color: #575756;
+}
+.parts-detail button {
+  border: 2px solid #dadad9;
+  background: #f5f4f4;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 0.8em;
+  margin-top: 2%;
+  padding: 2% 0;
+  width: 100%;
+  float: left;
+}
+.parts-detail button a {
+  color: #878786;
+  text-decoration: none;
 }
 .transition {
   transition: left 0.4s ease;
@@ -212,6 +234,17 @@
   margin: 0;
   padding: 0;
   z-index: 0;
+}
+/*
+---------------------------------------------------
+	TAB CLASSES EXPANDED AND CLOSED
+---------------------------------------------------
+*/
+.expanded-tap {
+  display: block;
+}
+.closed-tab {
+  display: none;
 }
 /*
 ---------------------------------------------------
@@ -393,7 +426,6 @@ form button a {
 }
 .USTabs .tabsSection #YMME-tab {
   width: 100%;
-  display: block;
 }
 .USTabs .tabsSection #YMME-tab select {
   width: 100%;
