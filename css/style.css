@@ -326,11 +326,22 @@
 	TAB CLASSES EXPANDED AND CLOSED
 ---------------------------------------------------
 */
-.expanded-tap {
+.expand-tab-content {
   display: block;
 }
+.hide-tab-content {
+  opacity: 0;
+  position: absolute;
+}
 .closed-tab {
-  display: none;
+  height: 0;
+  margin: 0;
+}
+.YMMHeight {
+  height: 185px;
+}
+.VINHeight {
+  height: 66px;
 }
 /*
 ---------------------------------------------------
@@ -517,6 +528,7 @@ form button a {
   margin: 2% 0 0 2%;
 }
 .USTabs .ymmeVinBtnSection button {
+  outline: none;
   width: 49%;
   height: 100%;
   float: left;
@@ -539,19 +551,24 @@ form button a {
 }
 .USTabs .tabsSection {
   float: left;
-  width: 92%;
+  width: 96%;
   margin: 2% 0 0 2%;
   background: #2166ab;
-  padding: 2%;
   border-radius: 3px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
 }
 .USTabs .tabsSection #YMME-tab {
-  width: 100%;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  float: left;
+  width: 96%;
+  padding: 7px;
 }
 .USTabs .tabsSection #YMME-tab select {
   width: 100%;
   float: left;
-  margin-bottom: 2%;
+  margin-bottom: 7px;
   display: block;
   height: 35px;
   border-radius: 3px;
@@ -566,12 +583,16 @@ form button a {
   color: #878786;
   font-weight: bold;
 }
-.USTabs .tabsSection #VIN-tab .VIN-tab-wrapper {
-  width: 100%;
+.USTabs .tabsSection #VIN-tab {
+  position: relative;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  width: 96%;
   height: 50px;
+  padding: 7px;
   float: left;
 }
-.USTabs .tabsSection #VIN-tab .VIN-tab-wrapper input {
+.USTabs .tabsSection #VIN-tab input {
   width: 85.5%;
   height: 100%;
   float: left;
@@ -580,7 +601,7 @@ form button a {
   text-indent: 5%;
   font-size: 1.1em;
 }
-.USTabs .tabsSection #VIN-tab .VIN-tab-wrapper button {
+.USTabs .tabsSection #VIN-tab button {
   width: 13%;
   height: 100%;
   margin-left: 1.5%;
@@ -590,9 +611,6 @@ form button a {
   color: #f5f4f4;
   font-size: 1.1em;
   float: left;
-}
-.USTabs .tabsSection .tab-content {
-  display: none;
 }
 /*
 ---------------------------------------------------

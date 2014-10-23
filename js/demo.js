@@ -48,27 +48,43 @@
 
 //************ TAB CLOSE EXPAND ************//
 
+$('.tabsSection').addClass('closed-tab');
+$('#YMME-tab').addClass('hide-tab-content');
+$('#VIN-tab').addClass('hide-tab-content');
 
-$(".USTabs .ymmeVinBtnSection button").click(function(event) {
-    event.preventDefault();
-    $('.tabsSection').removeClass('closed-tab');
-    $(this).addClass("current-tab-selected", {duration:500});
-    $(this).siblings().removeClass("current-tab-selected", {duration:500});
-    var tab = $(this).attr("href");
-    $(".tab-content").not(tab).css('display','none');
-    $(tab).fadeIn();
+$('.ymmeVinBtnSection button.icon-car').click(function() {
+    $(this).toggleClass('current-tab-selected');
+    $('.ymmeVinBtnSection button.icon-barcode').removeClass('current-tab-selected');
+    if ($(this).hasClass('current-tab-selected')) {
+        $('.tabsSection').addClass('YMMHeight');
+        $('.tabsSection').removeClass('VINHeight');
+        setTimeout(function(){
+            $('#YMME-tab').removeClass('hide-tab-content');
+            $('#VIN-tab').addClass('hide-tab-content');
+        },300);
+    }else{$('#YMME-tab').addClass('hide-tab-content');
+        setTimeout(function() {
+            $('.tabsSection').removeClass('YMMHeight');
+        },300);
+    }
 });
 
-var baseUrl = 'http://localhost:8888/ORD/';
-var CurrentUrl = document.URL;
-
-if (CurrentUrl === baseUrl + 'index.php') {
-    $('#YMME-tab').css('display','block');
-}
-else{
-    $(".ymmeVinBtnSection button").removeClass("current-tab-selected");
-    $('.tabsSection').addClass('closed-tab');
-}
+$('.ymmeVinBtnSection button.icon-barcode').click(function() {
+    $(this).toggleClass('current-tab-selected');
+    $('.ymmeVinBtnSection button.icon-car').removeClass('current-tab-selected');
+    if ($(this).hasClass('current-tab-selected')) {
+        $('.tabsSection').addClass('VINHeight');
+        $('.tabsSection').removeClass('YMMHeight');
+        setTimeout(function(){
+            $('#VIN-tab').removeClass('hide-tab-content');
+            $('#YMME-tab').addClass('hide-tab-content');
+        },300);
+    }else{$('#VIN-tab').addClass('hide-tab-content');
+        setTimeout(function() {
+            $('.tabsSection').removeClass('VINHeight');
+        },300);
+    }
+});
 
 //=================================================================================================================================================================================================================
 
