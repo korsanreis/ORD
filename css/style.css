@@ -330,17 +330,7 @@
   display: block;
 }
 .hide-tab-content {
-  opacity: 0;
-}
-.closed-tab {
-  height: 0;
-  margin: 0;
-}
-.YMMHeight {
-  height: 185px;
-}
-.VINHeight {
-  height: 66px;
+  display: none;
 }
 /*
 ---------------------------------------------------
@@ -536,8 +526,6 @@ form button a {
   font-size: 1.2em;
   background: #878786;
   color: #f5f4f4;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
 }
 .USTabs .ymmeVinBtnSection button:before {
   margin-right: 5%;
@@ -554,21 +542,17 @@ form button a {
   margin: 2% 0 0 2%;
   background: #2166ab;
   border-radius: 3px;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
 }
 .USTabs .tabsSection #YMME-tab {
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
   float: left;
   width: 96%;
-  padding: 7px;
+  padding: 2%;
   position: relative;
 }
 .USTabs .tabsSection #YMME-tab select {
   width: 100%;
   float: left;
-  margin-bottom: 7px;
+  margin-bottom: 2%;
   display: block;
   height: 35px;
   border-radius: 3px;
@@ -585,11 +569,9 @@ form button a {
 }
 .USTabs .tabsSection #VIN-tab {
   position: relative;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
   width: 96%;
   height: 50px;
-  padding: 7px;
+  padding: 2%;
   float: left;
 }
 .USTabs .tabsSection #VIN-tab input {

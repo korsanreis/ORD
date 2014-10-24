@@ -52,6 +52,45 @@ $('.tabsSection').addClass('closed-tab');
 $('#YMME-tab').addClass('hide-tab-content');
 $('#VIN-tab').addClass('hide-tab-content');
 
+function swTabCont (aTabCont,bTabCont){
+    $(aTabCont).removeClass('hide-tab-content');
+    $(bTabCont).addClass('hide-tab-content');
+}
+
+$('.ymmeVinBtnSection button.icon-car').click(function(){
+    if ($('.ymmeVinBtnSection button.icon-barcode').hasClass('current-tab-selected')){
+        $(this).toggleClass('current-tab-selected');
+        $('.ymmeVinBtnSection button.icon-barcode').removeClass('current-tab-selected');
+        swTabCont('#YMME-tab','#VIN-tab');
+    }
+    else{
+        $(this).toggleClass('current-tab-selected');
+        $('.ymmeVinBtnSection button.icon-barcode').removeClass('current-tab-selected');
+        if ($(this).hasClass('current-tab-selected')){
+            swTabCont('#YMME-tab','#VIN-tab');
+        }else{
+            $('#YMME-tab').addClass('hide-tab-content');
+        }
+    }
+});
+
+$('.ymmeVinBtnSection button.icon-barcode').click(function() {
+    if ($('.ymmeVinBtnSection button.icon-car').hasClass('current-tab-selected')) {
+        $(this).toggleClass('current-tab-selected');
+        $('.ymmeVinBtnSection button.icon-car').removeClass('current-tab-selected');
+        swTabCont('#VIN-tab','#YMME-tab');
+    }else{
+        $(this).toggleClass('current-tab-selected');
+        $('.ymmeVinBtnSection button.icon-car').removeClass('current-tab-selected');
+        if ($(this).hasClass('current-tab-selected')) {
+            swTabCont('#VIN-tab','#YMME-tab');
+        }else{
+            $('#VIN-tab').addClass('hide-tab-content');
+        }
+    }
+});
+
+/*
 function swTabHt (aTabHt,bTabHt) {
     $('.tabsSection').addClass(aTabHt);
     $('.tabsSection').removeClass(bTabHt);
@@ -108,6 +147,7 @@ $('.ymmeVinBtnSection button.icon-barcode').click(function() {
         }
     }
 });
+*/
 
 //=================================================================================================================================================================================================================
 
