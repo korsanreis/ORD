@@ -48,26 +48,24 @@
 
 //************ TAB CLOSE EXPAND ************//
 
-$(".USTabs .ymmeVinBtnSection button").click(function(event) {
-    event.preventDefault();
-    $('.tabsSection').removeClass('closed-tab');
-    $(this).addClass("current-tab-selected", {duration:500});
-    $(this).siblings().removeClass("current-tab-selected", {duration:500});
-    var tab = $(this).attr("href");
-    $(".tab-content").not(tab).css('display','none');
-    $(tab).fadeIn();
+$('#YMME-tab').addClass('hide-tab-content');
+$('#VIN-tab').addClass('hide-tab-content');
+
+function swTabCont (aTabCont,bTabCont){$(aTabCont).removeClass('hide-tab-content');$(bTabCont).addClass('hide-tab-content');}
+
+$(".ymmeVinBtnSection button").click(function() {
+    var TrgTab = $(this).attr("href");
+    var LsTab = $(this).siblings().attr("href");
+    if ($(this).siblings().hasClass('current-tab-selected')) {$(this).toggleClass('current-tab-selected');$(this).siblings().removeClass('current-tab-selected');swTabCont(TrgTab,LsTab);}
+    else{
+        $(this).toggleClass('current-tab-selected');$(this).siblings().removeClass('current-tab-selected');
+        if ($(this).hasClass('current-tab-selected')){swTabCont(TrgTab,LsTab);}else{$(TrgTab).addClass('hide-tab-content');}
+    }
 });
 
-var baseUrl = 'http://localhost:8888/ORD/';
-var CurrentUrl = document.URL;
+//var baseUrl = 'http://localhost:8888/ORD/';
+//var CurrentUrl = document.URL;
 
-if (CurrentUrl === baseUrl + 'index.php') {
-    $('#YMME-tab').css('display','block');
-}
-else{
-    $(".ymmeVinBtnSection button").removeClass("current-tab-selected");
-    $('.tabsSection').addClass('closed-tab');
-}
 
 //=================================================================================================================================================================================================================
 

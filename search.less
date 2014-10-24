@@ -64,6 +64,7 @@ form{
 		float: left;
 		margin:2% 0 0 2%;
 		button{
+			outline: none;
 			width: 49%;
 			height: 100%;
 			float: left;
@@ -72,7 +73,6 @@ form{
 			font-size: 1.2em;
 			background: @grey;
 			color: @white;
-			.transition;
 			&:before{margin-right: 5%;}
 			&:last-child{
 				margin-left: 2%;
@@ -84,13 +84,16 @@ form{
 	}
 	.tabsSection{
 		float: left;
-		width: 92%;
+		width: 96%;
 		margin:2% 0 0 2%;
 		background: @blue;
-		padding: 2%;
 		border-radius: 3px;
 		#YMME-tab{
-			width: 100%;
+
+			float: left;
+			width: 96%;
+			padding: 2%;
+			position: relative;
 			select{
 				width: 100%;
 				float: left;
@@ -111,34 +114,32 @@ form{
 			}
 		}
 		#VIN-tab{
-			.VIN-tab-wrapper{	
-				width: 100%;
-				height: 50px;
+
+			position: relative;
+			width: 96%;
+			height: 50px;
+			padding: 2%;
+			float: left;
+			input{
+				width: 85.5%;
+				height: 100%;
 				float: left;
-				input{
-					width: 85.5%;
-					height: 100%;
-					float: left;
-					border-radius: 3px;
-					border: 1px solid #ccc;
-					text-indent: 5%;
-					font-size: 1.1em;
-				}
-				button{
-					width: 13%;
-					height: 100%;
-					margin-left: 1.5%;
-					border:none;
-					border-radius: 3px;
-					background: @green;
-					color: @white;
-					font-size: 1.1em;
-					float: left;
-				}
+				border-radius: 3px;
+				border: 1px solid #ccc;
+				text-indent: 5%;
+				font-size: 1.1em;
 			}
-		}
-		.tab-content{
-			display: none;
+			button{
+				width: 13%;
+				height: 100%;
+				margin-left: 1.5%;
+				border:none;
+				border-radius: 3px;
+				background: @green;
+				color: @white;
+				font-size: 1.1em;
+				float: left;
+			}
 		}
 	}
 }
