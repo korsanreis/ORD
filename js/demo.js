@@ -48,106 +48,24 @@
 
 //************ TAB CLOSE EXPAND ************//
 
-$('.tabsSection').addClass('closed-tab');
 $('#YMME-tab').addClass('hide-tab-content');
 $('#VIN-tab').addClass('hide-tab-content');
 
-function swTabCont (aTabCont,bTabCont){
-    $(aTabCont).removeClass('hide-tab-content');
-    $(bTabCont).addClass('hide-tab-content');
-}
+function swTabCont (aTabCont,bTabCont){$(aTabCont).removeClass('hide-tab-content');$(bTabCont).addClass('hide-tab-content');}
 
-$('.ymmeVinBtnSection button.icon-car').click(function(){
-    if ($('.ymmeVinBtnSection button.icon-barcode').hasClass('current-tab-selected')){
-        $(this).toggleClass('current-tab-selected');
-        $('.ymmeVinBtnSection button.icon-barcode').removeClass('current-tab-selected');
-        swTabCont('#YMME-tab','#VIN-tab');
-    }
+$(".ymmeVinBtnSection button").click(function() {
+    var TrgTab = $(this).attr("href");
+    var LsTab = $(this).siblings().attr("href");
+    if ($(this).siblings().hasClass('current-tab-selected')) {$(this).toggleClass('current-tab-selected');$(this).siblings().removeClass('current-tab-selected');swTabCont(TrgTab,LsTab);}
     else{
-        $(this).toggleClass('current-tab-selected');
-        $('.ymmeVinBtnSection button.icon-barcode').removeClass('current-tab-selected');
-        if ($(this).hasClass('current-tab-selected')){
-            swTabCont('#YMME-tab','#VIN-tab');
-        }else{
-            $('#YMME-tab').addClass('hide-tab-content');
-        }
+        $(this).toggleClass('current-tab-selected');$(this).siblings().removeClass('current-tab-selected');
+        if ($(this).hasClass('current-tab-selected')){swTabCont(TrgTab,LsTab);}else{$(TrgTab).addClass('hide-tab-content');}
     }
 });
 
-$('.ymmeVinBtnSection button.icon-barcode').click(function() {
-    if ($('.ymmeVinBtnSection button.icon-car').hasClass('current-tab-selected')) {
-        $(this).toggleClass('current-tab-selected');
-        $('.ymmeVinBtnSection button.icon-car').removeClass('current-tab-selected');
-        swTabCont('#VIN-tab','#YMME-tab');
-    }else{
-        $(this).toggleClass('current-tab-selected');
-        $('.ymmeVinBtnSection button.icon-car').removeClass('current-tab-selected');
-        if ($(this).hasClass('current-tab-selected')) {
-            swTabCont('#VIN-tab','#YMME-tab');
-        }else{
-            $('#VIN-tab').addClass('hide-tab-content');
-        }
-    }
-});
+//var baseUrl = 'http://localhost:8888/ORD/';
+//var CurrentUrl = document.URL;
 
-/*
-function swTabHt (aTabHt,bTabHt) {
-    $('.tabsSection').addClass(aTabHt);
-    $('.tabsSection').removeClass(bTabHt);
-}
-
-function swTabCont (aTabCont,bTabCont){
-    $(aTabCont).removeClass('hide-tab-content').css('position','relative');
-    $(bTabCont).addClass('hide-tab-content').css('position','absolute');
-}
-
-$('.ymmeVinBtnSection button.icon-car').click(function(){
-    if ($('.ymmeVinBtnSection button.icon-barcode').hasClass('current-tab-selected')){
-        $(this).toggleClass('current-tab-selected');
-        $('.ymmeVinBtnSection button.icon-barcode').removeClass('current-tab-selected');
-        swTabHt('YMMHeight','VINHeight');
-        $('#VIN-tab').addClass('hide-tab-content');
-        setTimeout(function(){$('#YMME-tab').removeClass('hide-tab-content').css('position','relative');$('#VIN-tab').css('position','absolute');},200);
-    }
-    else{
-        $(this).toggleClass('current-tab-selected');
-        $('.ymmeVinBtnSection button.icon-barcode').removeClass('current-tab-selected');
-        if ($(this).hasClass('current-tab-selected')){
-            swTabHt('YMMHeight','VINHeight');
-            setTimeout(function(){swTabCont('#YMME-tab','#VIN-tab');},200);
-        }else{
-            $('#YMME-tab').addClass('hide-tab-content');
-            setTimeout(function() {$('.tabsSection').removeClass('YMMHeight');},200);
-        }
-    }
-});
-
-$('.ymmeVinBtnSection button.icon-barcode').click(function() {
-    if ($('.ymmeVinBtnSection button.icon-car').hasClass('current-tab-selected')) {
-        $(this).toggleClass('current-tab-selected');
-        $('.ymmeVinBtnSection button.icon-car').removeClass('current-tab-selected');
-        $('#YMME-tab').addClass('hide-tab-content');
-        setTimeout(function(){swTabHt('VINHeight','YMMHeight');$('#VIN-tab').removeClass('hide-tab-content').css('position','relative');$('#YMME-tab').css('position','absolute');},200);
-    }else{
-        $(this).toggleClass('current-tab-selected');
-        $('.ymmeVinBtnSection button.icon-car').removeClass('current-tab-selected');
-        if ($(this).hasClass('current-tab-selected')) {
-            swTabHt('VINHeight','YMMHeight');
-            setTimeout(function(){
-                swTabCont('#VIN-tab','#YMME-tab');
-            },200);
-        }else{
-            $('#VIN-tab').addClass('hide-tab-content');
-            setTimeout(function() {
-                $('.tabsSection').removeClass('VINHeight');
-                setTimeout(function() {
-                    $('#VIN-tab').css('position','absolute');
-                },200);
-            },200);
-        }
-    }
-});
-*/
 
 //=================================================================================================================================================================================================================
 
