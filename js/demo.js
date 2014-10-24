@@ -48,7 +48,6 @@
 
 //************ TAB CLOSE EXPAND ************//
 
-
 $(".USTabs .ymmeVinBtnSection button").click(function(event) {
     event.preventDefault();
     $('.tabsSection').removeClass('closed-tab');
