@@ -331,7 +331,6 @@
 }
 .hide-tab-content {
   opacity: 0;
-  position: absolute;
 }
 .closed-tab {
   height: 0;
@@ -564,6 +563,7 @@ form button a {
   float: left;
   width: 96%;
   padding: 7px;
+  position: relative;
 }
 .USTabs .tabsSection #YMME-tab select {
   width: 100%;
